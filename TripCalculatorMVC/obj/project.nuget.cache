@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "neHtgcIiLXdtg2lgGA9jbAzHh70eZ7TsLAV4iwDY9uYQaROVbDyGjGlV+3atV2PD8upQi5MtqVb2F/jNp+EUJw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\t430\\source\\repos\\TripCalculatorMVC\\TripCalculatorMVC\\TripCalculatorMVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\t430\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using TripCalculatorMVC.Models
+@model TripCalculatorDetails
+
+<div class="text-center">
+    <h2 class="display-4">Calculator</h2>
+    <form asp-action="Create" method="post">
+        <div class="form-group">
+            <label asp-for="LuisExpense"> </label>
+            <input asp-for="LuisExpense" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CarterExpense">  </label>
+            <input asp-for="CarterExpense" class="form-control">
+        </div>
+        <div class="form-group">
+            <label asp-for="DavidExpense">  </label>
+            <input asp-for="DavidExpense" class="form-control">
+        </div>
+        <button type="submit">Submit </button>
+    </form>
+
+    <br />
+    <h2 class="display-4">Output</h2>
+    <div>
+        @if (@ViewBag.lui < 0 && @ViewBag.carter > 0 && @ViewBag.david > 0)
+        {
+            <h4>@ViewBag.luiName owns @ViewBag.luiABS to @ViewBag.carterName and @ViewBag.davidName</h4>
+        }
+
+        @if (@ViewBag.lui < 0 && @ViewBag.carter < 0 && @ViewBag.david > 0)
+        {
+            <h4>@ViewBag.luiName owns @ViewBag.luiABS to @ViewBag.davidName and @ViewBag.carterName owns @ViewBag.carterABS to @ViewBag.davidName</h4>
+        }
+
+
+        @if (@ViewBag.lui > 0 && @ViewBag.carter < 0 && @ViewBag.david > 0)
+        {
+            <h4>@ViewBag.carterName owns @ViewBag.carterABS to @ViewBag.luiName and @ViewBag.davidName</h4>
+        }
+
+        @if (@ViewBag.lui > 0 && @ViewBag.carter > 0 && @ViewBag.david < 0)
+        {
+            <h4>@ViewBag.davidName owns @ViewBag.davidABS to @ViewBag.luiName and @ViewBag.carterName</h4>
+        }
+
+        @if (@ViewBag.lui < 0 && @ViewBag.carter > 0 && @ViewBag.david < 0)
+        {
+            <h4>@ViewBag.luiName owns @ViewBag.luiABS to @ViewBag.carterName and @ViewBag.davidName owns @ViewBag.davidABS to @ViewBag.carterName</h4>
+        }
+
+
+        @if (@ViewBag.lui > 0 && @ViewBag.carter < 0 && @ViewBag.david < 0)
+        {
+            <h4>@ViewBag.carterName owns @ViewBag.carterABS to @ViewBag.luiName and @ViewBag.davidName owns @ViewBag.davidABS to @ViewBag.luiName</h4>
+        }
+
+
+    </div>
+
+
+
+</div>
+
